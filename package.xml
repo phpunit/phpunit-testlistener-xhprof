@@ -23,9 +23,9 @@
   <email>kontakt@beberlei.de</email>
   <active>yes</active>
  </lead>
- <date>2011-09-17</date>
+ <date>2011-10-31</date>
  <version>
-  <release>1.0.0RC1</release>
+  <release>1.0.0</release>
   <api>1.0.0</api>
  </version>
  <stability>
@@ -60,7 +60,7 @@
    <package>
     <name>PHPUnit</name>
     <channel>pear.phpunit.de</channel>
-    <min>3.6.0RC1</min>
+    <min>3.6.0</min>
    </package>
    <extension>
     <name>xhprof</name>
