@@ -69,6 +69,9 @@
  *     <element key="xhprofFlags">
  *      <string>XHPROF_FLAGS_CPU,XHPROF_FLAGS_MEMORY</string>
  *     </element>
+ *     <element key="xhprofIgnore">
+ *      <string>call_user_func,call_user_func_array</string>
+ *     </element>
  *    </array>
  *   </arguments>
  *  </listener>
@@ -196,7 +199,9 @@ class PHPUnit_Util_Log_XHProf implements PHPUnit_Framework_TestListener
             }
         }
 
-        xhprof_enable($flags);
+        xhprof_enable($flags, array(
+            'ignored_functions' => explode(',', $this->options['xhprofIgnore'])
+        ));
     }
 
     /**
