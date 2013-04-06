@@ -214,9 +214,9 @@ class PHPUnit_Util_Log_XHProf implements PHPUnit_Framework_TestListener
     {
         $data         = xhprof_disable();
         $runs         = new XHProfRuns_Default;
-        $run          = $runs->save_run($data, $this->options['appNamespace']);
-        $this->runs[$test->getName()] = $this->options['xhprofWeb'] . '?run=' . $run .
-                                        '&source=' . $this->options['appNamespace'];
+        $source       = $this->options['appNamespace'] . '_' . $test->getName();
+        $run          = $runs->save_run($data, $source);
+        $this->runs[$test->getName()] = $this->options['xhprofWeb'] . '?run=' . $run .  '&source=' . $source;
     }
 
     /**
