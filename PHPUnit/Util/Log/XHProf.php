@@ -118,22 +118,30 @@ class PHPUnit_Util_Log_XHProf implements PHPUnit_Framework_TestListener
             );
         }
 
-        if (!isset($options['xhprofLibFile']) ||
-            !file_exists($options['xhprofLibFile'])) {
-            throw new InvalidArgumentException(
-              'The "xhprofLibFile" option is not set or the configured file does not exist'
-            );
+        if ( !function_exists('xhprof_get_possible_metrics') ) {
+            if (!isset($options['xhprofLibFile']) ||
+                !file_exists($options['xhprofLibFile']) ) {
+                throw new InvalidArgumentException(
+                'The "xhprofLibFile" option is not set or the configured file does not exist'
+                );
+            }
         }
 
-        if (!isset($options['xhprofRunsFile']) ||
-            !file_exists($options['xhprofRunsFile'])) {
-            throw new InvalidArgumentException(
-              'The "xhprofRunsFile" option is not set or the configured file does not exist'
-            );
+        if ( ! interface_exists('iXHProfRuns') ) {
+            if (!isset($options['xhprofRunsFile']) ||
+                !file_exists($options['xhprofRunsFile']) ) {
+                throw new InvalidArgumentException(
+                'The "xhprofRunsFile" option is not set or the configured file does not exist'
+                );
+            }
         }
 
-        require_once $options['xhprofLibFile'];
-        require_once $options['xhprofRunsFile'];
+        if ( isset($options['xhprofLibFile']) ) {
+            require_once $options['xhprofLibFile'];
+        }
+        if ( isset($options['xhprofRunsFile']) ) {
+            require_once $options['xhprofRunsFile'];
+        }
 
         $this->options = $options;
     }
