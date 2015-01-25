@@ -1,0 +1,40 @@
+{
+    "name": "phpunit/test-listener-xhprof",
+    "description": "A TestListener for PHPUnit that uses XHProf for automated profiling of the tested code",
+    "type": "library",
+    "keywords": [
+        "phpunit",
+        "xhprof"
+    ],
+    "homepage": "https://github.com/phpunit/dbunit/phpunit-testlistener-xhprof",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Sebastian Bergmann",
+            "email": "sb@sebastian-bergmann.de",
+            "role": "lead"
+        },
+        {
+            "name": "Benjamin Eberlei",
+            "email": "kontakt@beberlei.de",
+            "role": "lead"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/phpunit/dbunit/phpunit-testlistener-xhprof/issues"
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
