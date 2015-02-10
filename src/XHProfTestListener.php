@@ -189,8 +189,9 @@ class XHProfTestListener implements \PHPUnit_Framework_TestListener
         $data         = xhprof_disable();
         $runs         = new \XHProfRuns_Default;
         $run          = $runs->save_run($data, $this->options['appNamespace']);
-        $this->runs[$test->getName()] = $this->options['xhprofWeb'] . '?run=' . $run .
-                                        '&source=' . $this->options['appNamespace'];
+        $test_name    = get_class($test) . '::' . $test->getName();
+        $this->runs[$test_name] = $this->options['xhprofWeb'] . '?run=' . $run .
+                                  '&source=' . $this->options['appNamespace'];
     }
 
     /**
