@@ -6,7 +6,7 @@
         "phpunit",
         "xhprof"
     ],
-    "homepage": "https://github.com/phpunit/dbunit/phpunit-testlistener-xhprof",
+    "homepage": "https://github.com/phpunit/phpunit-testlistener-xhprof",
     "license": "BSD-3-Clause",
     "authors": [
         {
@@ -21,7 +21,7 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/phpunit/dbunit/phpunit-testlistener-xhprof/issues"
+        "issues": "https://github.com/phpunit/phpunit-testlistener-xhprof/issues"
     },
     "require": {
         "php": ">=5.3.3",
