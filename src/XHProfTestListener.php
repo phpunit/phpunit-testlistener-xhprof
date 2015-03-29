@@ -76,21 +76,21 @@ class XHProfTestListener implements \PHPUnit_Framework_TestListener
     public function __construct(array $options = array())
     {
         if (!isset($options['appNamespace'])) {
-            throw new InvalidArgumentException(
+            throw new \InvalidArgumentException(
               'The "appNamespace" option is not set.'
             );
         }
 
         if (!isset($options['xhprofLibFile']) ||
             !file_exists($options['xhprofLibFile'])) {
-            throw new InvalidArgumentException(
+            throw new \InvalidArgumentException(
               'The "xhprofLibFile" option is not set or the configured file does not exist'
             );
         }
 
         if (!isset($options['xhprofRunsFile']) ||
             !file_exists($options['xhprofRunsFile'])) {
-            throw new InvalidArgumentException(
+            throw new \InvalidArgumentException(
               'The "xhprofRunsFile" option is not set or the configured file does not exist'
             );
         }
@@ -105,10 +105,10 @@ class XHProfTestListener implements \PHPUnit_Framework_TestListener
      * An error occurred.
      *
      * @param \PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception              $e
      * @param float                  $time
      */
-    public function addError(\PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addError(\PHPUnit_Framework_Test $test, \Exception $e, $time)
     {
     }
 
@@ -127,10 +127,10 @@ class XHProfTestListener implements \PHPUnit_Framework_TestListener
      * Incomplete test.
      *
      * @param \PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception              $e
      * @param float                  $time
      */
-    public function addIncompleteTest(\PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addIncompleteTest(\PHPUnit_Framework_Test $test, \Exception $e, $time)
     {
     }
 
@@ -138,10 +138,10 @@ class XHProfTestListener implements \PHPUnit_Framework_TestListener
      * Skipped test.
      *
      * @param \PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception              $e
      * @param float                  $time
      */
-    public function addSkippedTest(\PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addSkippedTest(\PHPUnit_Framework_Test $test, \Exception $e, $time)
     {
     }
 
@@ -149,10 +149,10 @@ class XHProfTestListener implements \PHPUnit_Framework_TestListener
      * Risky test.
      *
      * @param \PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception              $e
      * @param float                  $time
      */
-    public function addRiskyTest(\PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addRiskyTest(\PHPUnit_Framework_Test $test, \Exception $e, $time)
     {
     }
 
