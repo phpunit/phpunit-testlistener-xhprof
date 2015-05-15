@@ -105,10 +105,10 @@ class XHProfTestListener implements \PHPUnit_Framework_TestListener
      * An error occurred.
      *
      * @param \PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception              $e
      * @param float                  $time
      */
-    public function addError(\PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addError(\PHPUnit_Framework_Test $test, \Exception $e, $time)
     {
     }
 
@@ -127,10 +127,10 @@ class XHProfTestListener implements \PHPUnit_Framework_TestListener
      * Incomplete test.
      *
      * @param \PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception              $e
      * @param float                  $time
      */
-    public function addIncompleteTest(\PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addIncompleteTest(\PHPUnit_Framework_Test $test, \Exception $e, $time)
     {
     }
 
@@ -138,10 +138,10 @@ class XHProfTestListener implements \PHPUnit_Framework_TestListener
      * Skipped test.
      *
      * @param \PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception              $e
      * @param float                  $time
      */
-    public function addSkippedTest(\PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addSkippedTest(\PHPUnit_Framework_Test $test, \Exception $e, $time)
     {
     }
 
@@ -149,10 +149,10 @@ class XHProfTestListener implements \PHPUnit_Framework_TestListener
      * Risky test.
      *
      * @param \PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception              $e
      * @param float                  $time
      */
-    public function addRiskyTest(\PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addRiskyTest(\PHPUnit_Framework_Test $test, \Exception $e, $time)
     {
     }
 
